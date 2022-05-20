@@ -36,6 +36,7 @@ class Solution {
             return;
 
         current.add(root.val);
+        // note the loop condition for valid result, especially target == root.val, not equal to zero
         if (root.val == sum && root.left == null && root.right == null) {
             // keep the same list and backtrack when a solution is not correct instead of
             // creating a new list at every iteration.
@@ -44,6 +45,7 @@ class Solution {
             // paths.add(current);
             // return;
         }
+        // recursion, error made: why here is not an else statement??? 
         findPaths(root.left, sum - root.val, current, paths);
         findPaths(root.right, sum - root.val, current, paths);
         current.remove(current.size() - 1); // if we hit null recurse back up through stack and remove elements in
