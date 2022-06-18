@@ -1,7 +1,7 @@
 class WordDictionary {
 
     public WordDictionary() {
-
+    define: too busy!
     }
 
     public void addWord(String word) {
